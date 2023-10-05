@@ -5,22 +5,22 @@ VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Engine", "Engine\Engine.vcxproj", "{DDFD6B65-D8DC-45E0-A075-B887F7E3A2EF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Editor", "Editor\Editor.csproj", "{C761EA87-D0EA-42D3-8491-65C0BE2B85D1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
-		Debug|x86 = Debug|x86
 		Release|x64 = Release|x64
-		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{DDFD6B65-D8DC-45E0-A075-B887F7E3A2EF}.Debug|x64.ActiveCfg = Debug|x64
 		{DDFD6B65-D8DC-45E0-A075-B887F7E3A2EF}.Debug|x64.Build.0 = Debug|x64
-		{DDFD6B65-D8DC-45E0-A075-B887F7E3A2EF}.Debug|x86.ActiveCfg = Debug|Win32
-		{DDFD6B65-D8DC-45E0-A075-B887F7E3A2EF}.Debug|x86.Build.0 = Debug|Win32
 		{DDFD6B65-D8DC-45E0-A075-B887F7E3A2EF}.Release|x64.ActiveCfg = Release|x64
 		{DDFD6B65-D8DC-45E0-A075-B887F7E3A2EF}.Release|x64.Build.0 = Release|x64
-		{DDFD6B65-D8DC-45E0-A075-B887F7E3A2EF}.Release|x86.ActiveCfg = Release|Win32
-		{DDFD6B65-D8DC-45E0-A075-B887F7E3A2EF}.Release|x86.Build.0 = Release|Win32
+		{C761EA87-D0EA-42D3-8491-65C0BE2B85D1}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C761EA87-D0EA-42D3-8491-65C0BE2B85D1}.Debug|x64.Build.0 = Debug|Any CPU
+		{C761EA87-D0EA-42D3-8491-65C0BE2B85D1}.Release|x64.ActiveCfg = Release|Any CPU
+		{C761EA87-D0EA-42D3-8491-65C0BE2B85D1}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
