@@ -25,7 +25,6 @@ dx3d::Window::Window(): Base()
 			wc.cbSize = sizeof(WNDCLASSEX);
 			wc.lpszClassName = L"DX3DWINDOW";
 			wc.lpfnWndProc = &WindowProcedure;
-
 			return RegisterClassEx(&wc);
 		};
 	

@@ -8,7 +8,7 @@ void dx3d::Game::run()
 	{
 		while (PeekMessage(&msg, NULL, 0, 0, PM_REMOVE))
 		{
-			if (msg.message = WM_QUIT)
+			if (msg.message == WM_QUIT)
 			{
 				m_isRunning = false;
 				break;
