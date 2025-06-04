@@ -17,7 +17,7 @@ static LRESULT CALLBACK WindowProcedure(HWND hwnd, UINT msg, WPARAM wparam, LPAR
 	return 0;
 }
 
-dx3d::Window::Window(): Base()
+dx3d::Window::Window(const WindowDesc& desc) : Base(desc.base)
 {
 	auto registerWindowClassFunction = []()
 		{
@@ -32,6 +32,7 @@ dx3d::Window::Window(): Base()
 
 	if (!windowClassId) 
 	{
+		getLogger().log(Logger::LogLevel::Error, "ERROR: RegisterClassEx has failed.");
 		throw std::runtime_error("ERROR: RegisterClassEx has failed.");
 	}
 	RECT rc{ 0, 0, 1280, 720 };
@@ -40,11 +41,13 @@ dx3d::Window::Window(): Base()
 	m_handle = CreateWindowEx(NULL, MAKEINTATOM(windowClassId), L"GoldScar", WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU, CW_USEDEFAULT, CW_USEDEFAULT, rc.right - rc.left, rc.bottom - rc.top, NULL, NULL, NULL, NULL);
 	if (!m_handle)
 	{
-		throw std::runtime_error("ERROR: m_handle has failed.");
+		getLogger().log(Logger::LogLevel::Error, "ERROR: CreateWindowEx has failed.");
+		throw std::runtime_error("ERROR: CreateWindowEx has failed.");
 	}
 	ShowWindow(static_cast<HWND>(m_handle), SW_SHOW);
 
 }
+
 
 dx3d::Window::~Window()
 {
